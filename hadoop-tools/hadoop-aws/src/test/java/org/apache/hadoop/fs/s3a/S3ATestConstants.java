@@ -90,12 +90,12 @@ public interface S3ATestConstants {
   /**
    * The landsat bucket: {@value}.
    */
-  String LANDSAT_BUCKET = "s3a://landsat-pds/";
+  String LANDSAT_BUCKET = "s3a://noaa-isd-pds/";
 
   /**
    * Default path for the multi MB test file: {@value}.
    */
-  String DEFAULT_CSVTEST_FILE = LANDSAT_BUCKET + "scene_list.gz";
+  String DEFAULT_CSVTEST_FILE = LANDSAT_BUCKET + "isd-inventory.csv.z";
 
   /**
    * Name of the property to define the timeout for scale tests: {@value}.

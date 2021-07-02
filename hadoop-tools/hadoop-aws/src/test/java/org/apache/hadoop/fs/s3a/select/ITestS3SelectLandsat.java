@@ -147,9 +147,9 @@ public class ITestS3SelectLandsat extends AbstractS3SelectTest {
    */
   public static final String SELECT_ENTITY_ID_ALL_CLOUDS =
       "SELECT\n"
-          + "s.entityId from\n"
+          + "s.JUL from\n"
           + "S3OBJECT s WHERE\n"
-          + "s.\"cloudCover\" = '100.0'\n"
+          + "s.\"YEAR\" = '2011'\n"
           + LIMITED;
 
   /**
@@ -158,14 +158,14 @@ public class ITestS3SelectLandsat extends AbstractS3SelectTest {
    * Value: {@value}.
    */
   public static final String SELECT_SUNNY_ROWS_NO_LIMIT
-      = "SELECT * FROM S3OBJECT s WHERE s.cloudCover = '0.0'";
+      = "SELECT * FROM S3OBJECT s WHERE s.YEAR = '2011'";
 
   /**
    * A Select call which returns nothing, always.
    * Value: {@value}.
    */
   public static final String SELECT_NOTHING
-      = "SELECT * FROM S3OBJECT s WHERE s.cloudCover = 'sunny'";
+      = "SELECT * FROM S3OBJECT s WHERE s.YEAR = '1000'";
 
   /**
    * Select the processing level; no limit.
@@ -173,7 +173,7 @@ public class ITestS3SelectLandsat extends AbstractS3SelectTest {
    */
   public static final String SELECT_PROCESSING_LEVEL_NO_LIMIT =
       "SELECT\n"
-          + "s.processingLevel from\n"
+          + "s.USAF from\n"
           + "S3OBJECT s";
 
   @Override
